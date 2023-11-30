@@ -1,0 +1,4 @@
+@host=http://localhost:5024
+
+GET {{host}}/tarefa
+Content-Type: application/json

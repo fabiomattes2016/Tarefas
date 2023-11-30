@@ -1,0 +1,10 @@
+@host=http://localhost:5024
+
+PUT {{host}}/tarefa
+Content-Type: application/json
+
+{
+    "id": "ff339fb2-126c-4586-b0e6-6f6e47848457",
+    "titulo": "Tarefa de Testes 3",
+    "concluido": true
+}

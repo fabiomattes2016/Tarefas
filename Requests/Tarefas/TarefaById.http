@@ -1,0 +1,5 @@
+@host=http://localhost:5024
+@id=39a01c61-5ebf-413a-b91e-fedf3bb509b7
+
+GET {{host}}/tarefa/{{id}}
+Content-Type: application/json

@@ -1,0 +1,5 @@
+@host=http://localhost:5024
+@id=e31a9056-ed88-485a-ae91-bf1b85e1d672
+
+DELETE {{host}}/tarefa/{{id}}
+Content-Type: application/json
