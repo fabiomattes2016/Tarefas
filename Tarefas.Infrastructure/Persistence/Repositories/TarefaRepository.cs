@@ -1,16 +1,24 @@
 using Tarefas.Application.Common.Interfaces.Persistence;
 using Tarefas.Domain.Entities;
 
-namespace Tarefas.Infrastructure.Persistence
+namespace Tarefas.Infrastructure.Persistence.Repositories
 {
     public class TarefaRepository : ITarefaRepository
     {
+        private readonly TarefasDbContext _dbContext;
+
+        public TarefaRepository(TarefasDbContext dbContext)
+        {
+            _dbContext = dbContext;
+        }
+
         private static readonly List<Tarefa> _tarefas = [];
         private static readonly List<Domain.TarefaAggregate.Tarefa> _tarefasAgg = [];
 
         public void Add(Domain.TarefaAggregate.Tarefa tarefa)
         {
-            _tarefasAgg.Add(tarefa);
+            _dbContext.Add(tarefa);
+            _dbContext.SaveChanges();
         }
 
         public List<Tarefa>? GetAll()

@@ -5,10 +5,15 @@ namespace Tarefas.Domain.TarefaAggregate
 {
     public sealed class Tarefa : AggregateRoot<TarefaId>
     {
-        public string Titulo { get; }
-        public bool Concluido { get; }
-        public DateTime? CriadoEm { get; }
-        public DateTime? AtualizadoEm { get; set; }
+        public string Titulo { get; private set; }
+        public bool Concluido { get; private set; }
+        public DateTime? CriadoEm { get; private set; }
+        public DateTime? AtualizadoEm { get; private set; }
+
+
+#pragma warning disable CS8618
+        private Tarefa() { }
+#pragma warning restore CS8618
 
         private Tarefa(
             TarefaId id,

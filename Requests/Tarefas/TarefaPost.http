@@ -4,5 +4,5 @@ POST {{host}}/tarefa
 Content-Type: application/json
 
 {
-    "titulo": "Tarefa de Testes 2"
+    "titulo": "Tarefa de Testes"
 }

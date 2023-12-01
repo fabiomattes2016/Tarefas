@@ -5,5 +5,10 @@ namespace Tarefas.Domain.Common.Models
         protected AggregateRoot(TId id) : base(id)
         {
         }
+
+
+#pragma warning disable CS8618
+        protected AggregateRoot() { }
+#pragma warning restore CS8618
     }
 }
